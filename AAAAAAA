@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Usuario{
+	public static void main(String [] args){
+	Scanner scan = new Scanner (System.in);
+	String login,password;
+	System.out.println("ingrese su login");
+	login=scan.next();
+	System.out.println("ingrese su contraseña");
+	password=scan.next();
+	Verificador(login,password);
+	}
+	public static void Verificador(String l, String p){
+		
+		if(l.equals("Admin") && p.equals("1234")){
+			System.out.println(Saludar());
+		}else{
+		String msg="Error";
+		System.out.println(msg);
+		}
+	}		
+public static String Saludar(){
+return "Bienvenido al Sistema de Maxima seguridad";
+}	
+public static String Error(){
+return "Acceso denegado";
+}
+}
