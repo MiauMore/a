@@ -1,0 +1,40 @@
+public class Lampara {
+    private String marca;
+    private int potencia;
+    private boolean encendida;
+
+    public Lampara(String marca, int potencia) {
+        this.marca = marca;
+        this.potencia = potencia;
+        encendida=false;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public int getPotencia() {
+        return potencia;
+    }
+
+    public void setPotencia(int potencia) {
+        this.potencia = potencia;
+    }
+
+    public boolean estaEncendida() {
+        return encendida;
+    }
+
+    public void encender() {
+        encendida=true;
+    }
+    public void apagar() {
+        encendida=false;
+    }
+
+}
+

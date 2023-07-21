@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class JavaApplication6 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner (System.in);
+        System.out.println("Ingrese su nombre de usuario y contraseña");
+        verification(scan.nextLine(),scan.nextLine());
+    }
+    public static void verification(String username, String password) {
+        if(username.equals("Nombre Generico") && password.equals("password")){
+            success();
+        }else{
+            error();
+        }
+}
+ public static void success() {
+        System.out.println("Bienvenido");
+    }
+    public static void error() {
+        System.out.println("Usted ha ingresado un dato incorrecto");
+    }
+}

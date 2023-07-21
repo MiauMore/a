@@ -1,0 +1,14 @@
+public class DemoLampara {
+    public static void main (String[] args){
+        Lampara lamp=new Lampara("Luxo",100);
+        System.out.println(lamp.getMarca());
+        System.out.println(lamp.getPotencia());
+        System.out.println(lamp.estaEncendida());
+        lamp.setMarca("Luxo JR");
+        lamp.setPotencia(300);
+        lamp.encender();
+        System.out.println(lamp.getMarca());
+        System.out.println(lamp.getPotencia());
+        System.out.println(lamp.estaEncendida());
+    }
+}

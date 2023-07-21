@@ -1,0 +1,49 @@
+//Al iniciar el programa pide 20 palabras para ingresar a una matriz, luego de ingresarlas genera un bucle
+//En este bucle puedes buscar una palabra en especifico en la matriz, si la palabra es fin el bucle se detiene y el programa termina
+
+
+import java.util.Scanner;
+public class awa { 
+ public static void main (String[] args) {
+	Scanner teclado= new Scanner (System.in);
+	String [][] palabras = new String[10][2];
+	//Crea el scanner y la matriz
+	//10 filas ; 2 columnas = 20 palabras
+	//para contar la posicion se empieza desde 0
+
+
+	//Las 20 palabras son preguntadas y registradas en la matriz
+	System.out.println("Ingrese 20 palabras");
+	for (int i=0; i<10; i++){
+		for (int j=0; j<2; j++){
+			palabras[i][j] = teclado.next();
+		}
+	}
+	
+
+	//Pregunta la palabra a buscar y define el contador que mostrara cuantas veces esta la palabra en la matriz
+		String palabra;
+	do { 
+	if (palabra!= "fin");//verifica que la palabra no sea "fin"
+	System.out.println("ingresa una palabra para buscar");
+	palabra = teclado.next();
+	int cont = 0;
+	
+	//Compara la palabra con cada uno de los valores de la matriz
+	for (int i=0; i<10; i++){
+		for (int j=0; j<2; j++){
+			if (palabras[i][j].equals(palabra)){
+				//Si la palabra coincide, el contador aumenta (El contador necesita ser reseteado por cada ciclo)
+				cont++;
+			}
+			
+		}
+	}
+	System.out.println("la palabra " + palabra + " esta " + cont + " veces en la matriz");
+	
+	
+	//Comprueba que la palabra no sea "fin" para reiniciar el ciclo
+	} while(palabra!= "fin" );
+	 
+ }
+}
